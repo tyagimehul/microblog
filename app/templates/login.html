@@ -6,14 +6,14 @@
         {{ form.hidden_tag() }}
         <p>
             {{ form.username.label }}<br>
-            {{ form.username(size=32) }}
+            {{ form.username(size=32) }}<br>
             {% for error in form.username.errors %}
                 <span style="color:red;">[{{ error }}]</span>
             {% endfor %}
         </p>
         <p>
             {{ form.password.label }}<br>
-            {{ form.password(size=32) }}
+            {{ form.password(size=32) }}<br>
             {% for error in form.password.errors %}
                 <span style="color:red;">[{{ error }}]</span>
             {% endfor %}
@@ -26,4 +26,7 @@
             {{ form.submit() }}
         </p>
     </form>
+    <p>
+        New User? <a href="{{url_for('register')}}">Register here</a>
+    </p>
 {% endblock %}
