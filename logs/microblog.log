@@ -1,0 +1,40 @@
+2022-07-21 10:35:43,313 INFO: Microblog startup [in /Users/mehultyagi/Check/microblog/app/__init__.py:52]
+2022-07-21 10:35:50,277 ERROR: Exception on /edit_profile [GET] [in /Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py:1449]
+Traceback (most recent call last):
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 303, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/mehultyagi/Check/microblog/app/routes.py", line 89, in edit_profile
+    form = EditProfileForm(current_user.username)
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/Users/mehultyagi/Check/microblog/app/forms.py", line 44, in __init__
+    super(EditProfileForm, self).__init__(formdata, **kwargs)
+NameError: name 'formdata' is not defined
+2022-07-21 10:36:09,851 ERROR: Exception on /edit_profile [GET] [in /Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py:1449]
+Traceback (most recent call last):
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 303, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/mehultyagi/Check/microblog/app/routes.py", line 89, in edit_profile
+    form = EditProfileForm(current_user.username)
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/Users/mehultyagi/Check/microblog/app/forms.py", line 44, in __init__
+    super(EditProfileForm, self).__init__(formdata, **kwargs)
+NameError: name 'formdata' is not defined
+2022-07-21 10:38:15,237 INFO: Microblog startup [in /Users/mehultyagi/Check/microblog/app/__init__.py:52]
