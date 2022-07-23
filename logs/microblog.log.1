@@ -1,0 +1,123 @@
+2022-07-23 11:39:16,340 ERROR: Exception on /user/Whale [GET] [in /Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py:1449]
+Traceback (most recent call last):
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/sqlalchemy/orm/attributes.py", line 327, in __getattr__
+    return getattr(self.comparator, key)
+AttributeError: 'Comparator' object has no attribute 'username'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 303, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/mehultyagi/Check/microblog/app/routes.py", line 84, in user
+    posts = Post.query.filter_by(Post.author.username == username).order_by(Post.timestamp.desc()).all()
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/sqlalchemy/orm/attributes.py", line 329, in __getattr__
+    util.raise_(
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+AttributeError: Neither 'InstrumentedAttribute' object nor 'Comparator' object associated with Post.author has an attribute 'username'
+2022-07-23 11:40:40,021 INFO: Microblog startup [in /Users/mehultyagi/Check/microblog/app/__init__.py:52]
+2022-07-23 11:40:44,234 ERROR: Exception on /user/Whale [GET] [in /Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py:1449]
+Traceback (most recent call last):
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/sqlalchemy/orm/attributes.py", line 327, in __getattr__
+    return getattr(self.comparator, key)
+AttributeError: 'Comparator' object has no attribute 'username'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 303, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/mehultyagi/Check/microblog/app/routes.py", line 84, in user
+    posts = Post.query.filter(Post.author.username == username).order_by(Post.timestamp.desc()).all()
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/sqlalchemy/orm/attributes.py", line 329, in __getattr__
+    util.raise_(
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+AttributeError: Neither 'InstrumentedAttribute' object nor 'Comparator' object associated with Post.author has an attribute 'username'
+2022-07-23 11:43:15,458 INFO: Microblog startup [in /Users/mehultyagi/Check/microblog/app/__init__.py:52]
+2022-07-23 12:36:26,195 INFO: Microblog startup [in /Users/mehultyagi/Check/microblog/app/__init__.py:52]
+2022-07-23 12:45:38,563 INFO: Microblog startup [in /Users/mehultyagi/Check/microblog/app/__init__.py:52]
+2022-07-23 12:47:02,046 ERROR: Exception on /explore [GET] [in /Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py:1449]
+Traceback (most recent call last):
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 303, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/mehultyagi/Check/microblog/app/routes.py", line 156, in explore
+    page = request.args.get("page", 1, False)
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/werkzeug/datastructures.py", line 265, in get
+    rv = type(rv)
+TypeError: 'bool' object is not callable
+2022-07-23 12:48:11,657 ERROR: Exception on /explore [GET] [in /Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py:1449]
+Traceback (most recent call last):
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 303, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/mehultyagi/Check/microblog/app/routes.py", line 156, in explore
+    page = request.args.get("page", 1, False)
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/werkzeug/datastructures.py", line 265, in get
+    rv = type(rv)
+TypeError: 'bool' object is not callable
+2022-07-23 12:50:19,538 INFO: Microblog startup [in /Users/mehultyagi/Check/microblog/app/__init__.py:52]
+2022-07-23 13:08:17,311 INFO: Microblog startup [in /Users/mehultyagi/Check/microblog/app/__init__.py:52]
+2022-07-23 13:09:56,214 INFO: Microblog startup [in /Users/mehultyagi/Check/microblog/app/__init__.py:52]
+2022-07-23 13:11:31,997 INFO: Microblog startup [in /Users/mehultyagi/Check/microblog/app/__init__.py:52]
+2022-07-23 13:18:29,872 INFO: Microblog startup [in /Users/mehultyagi/Check/microblog/app/__init__.py:52]
+2022-07-23 13:18:36,773 ERROR: Exception on /user/Whale [GET] [in /Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py:1449]
+Traceback (most recent call last):
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/sqlalchemy/orm/attributes.py", line 327, in __getattr__
+    return getattr(self.comparator, key)
+AttributeError: 'Comparator' object has no attribute 'username'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 303, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/mehultyagi/Check/microblog/app/routes.py", line 99, in user
+    Post.query.filter(Post.author.username == user.username)
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/sqlalchemy/orm/attributes.py", line 329, in __getattr__
+    util.raise_(
+  File "/Users/mehultyagi/Check/microblog/venv/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+AttributeError: Neither 'InstrumentedAttribute' object nor 'Comparator' object associated with Post.author has an attribute 'username'
+2022-07-23 13:19:27,729 INFO: Microblog startup [in /Users/mehultyagi/Check/microblog/app/__init__.py:52]
+2022-07-23 13:28:57,011 INFO: Microblog startup [in /Users/mehultyagi/Check/microblog/app/__init__.py:52]
