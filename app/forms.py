@@ -53,3 +53,7 @@ class EditProfileForm(FlaskForm):
                         username.data
                     )
                 )
+
+
+class EmptyForm(FlaskForm):
+    submit = SubmitField("Submit")
