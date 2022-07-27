@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -6,6 +6,7 @@ from flask_login import LoginManager
 from flask_mail import Mail
 from flask_bootstrap import Bootstrap5
 from flask_moment import Moment
+from flask_babel import Babel, lazy_gettext as _l
 import logging, os
 from logging.handlers import SMTPHandler, RotatingFileHandler
 
@@ -16,10 +17,17 @@ migrate = Migrate(app, db)
 mail = Mail(app)
 login = LoginManager(app)
 login.login_view = "login"
+login.login_message = _l('Please log in to access this page.')
 bootstrap = Bootstrap5(app)
 moment = Moment(app)
+babel = Babel(app)
 
 from app import routes, models, errors
+
+
+@babel.localeselector
+def get_locale():
+    return request.accept_languages.best_match(app.config["LANGUAGES"])
 
 
 if not app.debug:

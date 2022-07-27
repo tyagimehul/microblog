@@ -2,12 +2,12 @@
 {% from 'bootstrap5/form.html' import render_form, render_field, render_form_row %}
 
 {% block content %}
-<h1>Sign In</h1>
+<h1>{{ _('Sign In') }}</h1>
 {{ render_form(form)}}
 <p>
-    Forgot your password? <a href="{{ url_for('reset_password_request') }}">Click to Reset</a>
+    {{ _('Forgot your password?') }} <a href="{{ url_for('reset_password_request') }}">{{ _('Click to Reset') }}</a>
 </p>
 <p>
-    New User? <a href="{{url_for('register')}}">Register here</a>
+    {{ _('New User?') }} <a href="{{url_for('register')}}">{{ _('Register here') }}</a>
 </p>
 {% endblock %}

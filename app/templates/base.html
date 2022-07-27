@@ -10,7 +10,7 @@
     {% if title %}
     <title>{{ title }} - Microblog</title>
     {% else %}
-    <title>Welcome to Microblog</title>
+    <title>{{ _('Welcome to Microblog') }}</title>
     {% endif %}
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
     {{ bootstrap.load_css() }}
@@ -60,7 +60,7 @@
     {% with messages = get_flashed_messages() %}
     {% if messages %}
     {% for message in messages %}
-    <div class="alert alert-danger" role="alert">{{ message }}</div>
+    <div class="alert alert-info" role="alert">{{ message }}</div>
     {% endfor %}
     {% endif %}
     {% endwith %}
@@ -79,5 +79,6 @@
     {{ bootstrap.load_js() }}
     
     {{ moment.include_moment() }}
+    {{ moment.lang(g.locale) }}
 </body>
 </html>
