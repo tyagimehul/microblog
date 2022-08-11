@@ -15,6 +15,7 @@ from flask_babel import _, get_locale
 from app.models import User, Post
 from werkzeug.urls import url_parse
 from datetime import datetime
+from langdetect import detect, LangDetectException
 
 
 @app.before_request
@@ -31,7 +32,11 @@ def before_request():
 def index():
     form = PostForm()
     if form.validate_on_submit():
-        post = Post(body=form.post.data, author=current_user)
+        try:
+            language = detect(form.post.data)
+        except LangDetectException:
+            language = ""
+        post = Post(body=form.post.data, author=current_user, language=language)
         db.session.add(post)
         db.session.commit()
         flash(_("Your post is now live!"))
@@ -56,7 +61,11 @@ def index():
 def login():
     if current_user.is_authenticated:
         flash(
-            _("You are already logged in as %(username)s", username=current_user.username))  # can remove
+            _(
+                "You are already logged in as %(username)s",
+                username=current_user.username,
+            )
+        )  # can remove
         return redirect(url_for("index"))
     form = LoginForm()
     if form.validate_on_submit():
@@ -83,7 +92,11 @@ def logout():
 def register():
     if current_user.is_authenticated:
         flash(
-            _("You are already logged in as %(username)s", username=current_user.username))  # can remove
+            _(
+                "You are already logged in as %(username)s",
+                username=current_user.username,
+            )
+        )  # can remove
         return redirect(url_for("index"))
     form = RegistrationForm()
     if form.validate_on_submit():
