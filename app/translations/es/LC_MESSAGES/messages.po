@@ -150,19 +150,19 @@ msgstr "Tu contraseña ha sido cambiada."
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s dijo %(when)s"
 
-#: app/templates/error_404.html:4
+#: app/templates/errors/404.html:4
 msgid "Not Found"
 msgstr "Página No Encontrada"
 
-#: app/templates/error_404.html:5 app/templates/error_500.html:6
+#: app/templates/errors/404.html:5 app/templates/errors/500.html:6
 msgid "Back"
 msgstr "Atrás"
 
-#: app/templates/error_500.html:4
+#: app/templates/errors/500.html:4
 msgid "An unexpected error has occurred"
 msgstr "Ha ocurrido un error inesperado"
 
-#: app/templates/error_500.html:5
+#: app/templates/errors/500.html:5
 msgid "The administrator has been notified. Sorry for the inconvenience!"
 msgstr "El administrador ha sido notificado. ¡Lamentamos la inconveniencia!"
 
